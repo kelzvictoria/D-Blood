@@ -1,0 +1,564 @@
+﻿.navbar-toggle{
+    background-color:#333333;
+}
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+.contact-p{
+    padding-left:10px;
+    padding-right:10px;
+}
+/* Set padding to keep content from hitting the edges */
+.body-content {
+     
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    /*max-width: 280px;*/
+}
+
+#outerbox{
+    height:100%;
+    width:100%;
+}
+
+.donate{
+    /*height: 350px;
+    width: 100%;*/
+    font-size: 21px;
+    font-weight: 200;
+    line-height: 2.1428571435;
+    color: white;
+    background-image: url('../IMG/Rectangle.png');
+}
+
+#outerwrap{
+	position : relative;
+	z-index : 0;
+	height : 400px;
+}
+
+#layer1 {
+    position: absolute;
+    z-index: 1;
+    height: 280px;
+    width: 400px;
+    margin-top: 40px;
+    right: 300px;
+    background-image: url('../IMG/Rectangle (1).png');
+}
+
+#layer2{
+	position: absolute;
+	z-index: 2;
+	background-color : rgba(253, 252, 250,1);
+	height : 300px;
+	width: 500px;
+	top:60px;
+	left:210px;
+}
+
+#layer2-content{
+    padding-left:35px;
+    padding-right:15px;
+    font-size: 16px;
+    /*font-weight: 200;*/
+    line-height: 2.1428571435;
+}
+
+#layer2-content p{
+    line-height: 1.4;
+}
+
+#layer2-content h2{
+    font-family :'Segoe Marker';
+    line-height : 0;
+}
+
+#layer2-content #underline{
+    line-height:1.4;
+    font-weight :600;
+    color:#f44336;
+}
+
+    #layer2-content ul {
+        list-style: circle inside url("../IMG/bullet.PNG");
+    }
+
+    #outerbox{
+        margin-left:90px;
+       
+    }
+
+    #volunteer{
+        height: 100%;
+        background-color:#219cc5;
+        width: 100%;
+    }
+
+    /*.panel-body{
+        max-height:2700px;
+    }*/
+
+    #volunteer-content{
+        color:white;
+        text-align:center;
+        padding-top:20px;
+        padding-left:150px;
+        padding-right:150px;
+        padding-bottom:20px;
+    }
+
+    #donation-process{
+        height: 280px;
+        width: 100%;
+    }
+
+    #process-header{
+      text-align:center;
+      padding-top:40px;
+    }
+
+    #underline{
+    line-height:1.4;
+    font-weight :400;
+    color:#f44336;
+}
+
+#process-content {
+    text-align: center;
+}
+
+  #volunteers{
+        height: 100%;
+        background-color:#eaeaea;
+        width: 100%;
+    }
+
+    #volunteers-header{
+      text-align:center;  
+        
+        padding-top:40px;
+    }
+
+#volunteers-content {
+    text-align: center;
+}
+
+.vboxes img{
+    border-radius:50%;
+}
+
+.vboxes{
+    margin-left:22px;
+    background-color:white;
+    border:1px solid;
+    border-color:white;
+}
+
+  #sponsors{
+        height: 100%;
+        width: 100%;
+    }
+
+    #sponsors-header{
+      text-align:center;
+    }
+
+.footer{
+    background-color:black;
+    height:100%;
+    width:100%;
+    /*padding: 20px 0;*/
+    color:#e8e1e1;
+    margin-top:30px;
+    padding-left:20px;
+    
+}
+
+.footer a{
+    color:white;
+}
+
+.footer h3{
+line-height:1.6;
+}
+
+.socials li{
+    float:left;
+    margin: 0px 5px 5px 10px;
+}
+
+.footer-small{
+    background-color:black;
+    height:100%;
+    width:100%;
+    padding: 70px 0;
+    color:#e8e1e1;
+    /*margin-top:30px;*/
+    padding-left:80px;
+    
+}
+
+.logo{
+    padding:40px 0;
+}
+
+.contact{
+    
+}
+
+#search{
+    padding:40px 0;
+}
+
+#searchbox{
+        right: 60px;
+        padding-right:40px;
+        height : 100%;
+        width:100%;
+    }
+#searchbox h3{
+    line-height:0;
+}
+
+.register-form {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right:0px;
+    color: #f9f7f7;
+    background-color: #eeeeee;
+    background-image: url('../IMG/Rectangle.png');
+    height: 100%;
+    border-radius: 6px;
+    font-family :'Segoe Marker';
+}
+
+.register-form h2{
+    font-family :'Segoe Marker';
+}
+
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.field-validation-error,
+label.error  {
+    color: red;
+}
+
+.input-validation-error,
+input.error {
+    border: 2px solid red;
+}
+
+#dlist{
+    padding:15px;
+}
+#sponsors-cont {
+    display:none;
+}
+
+@media only screen and (max-width : 991px){
+    div.searchimg{
+        display:none;
+    }
+
+    div.searchform{
+        margin-left: 70px;
+    }
+
+    #volunteer{
+        height:100%;
+        width:100%;
+    }
+}
+
+@media only screen and (max-width:360px){
+
+    .panel-body{
+        max-height:100%;
+        max-width:100%;
+    }
+    .jumbotron {
+        padding: 30px;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        font-size: 12px;
+        font-weight: 100;
+        line-height: 2.1428571435;
+        color: white;
+        background-color: #eeeeee;
+        background-image: url('../IMG/Rectangle-jumbo.png');
+    }
+
+    .jumbotron h1 {
+        font-size:16px;
+        font-weight:100;
+      /*line-height: 1;*/
+      color: inherit;
+    }
+
+    .jumbotron p {
+      line-height: 1.4;
+    }
+
+    .container .jumbotron {
+        height: 100%;
+        /*border-radius: 6px;*/
+    }
+
+    .box-content{
+        width:300px;
+    }
+
+    .boxes{
+        width: 300px;
+        margin-right: 90px;
+    
+        padding-left:30px; /*65px;*/
+    }
+
+    .contact-p{
+        padding-left: 30px;
+    }
+
+    .navbar-toggle{
+        margin-left: 140px !important;
+        float: none !important;
+    }
+
+    .box-content{
+        font-size:12px;
+        font-weight:100;
+
+    }
+
+    .box-content h3{
+        font-size:14px;
+        font-weight:200;
+    }
+
+    #outerwrap{
+	    position : relative;
+	    z-index : 0;
+        height : 350px;
+        right: 80px; /*40px;*/
+    }
+
+    #layer1 {
+        position: absolute;
+        z-index: 1;
+        height: 200px;
+        width: 200px;
+        margin-top: 40px;
+        background-image: url('../IMG/Rectangle (1).png');
+        left:95px;
+    }
+
+    #layer2{
+	    position: absolute;
+	    z-index: 2;
+	    background-color : rgba(253, 252, 250,1);
+	    /*height : 300px;*/
+        height : 250px;
+	    /*width: 500px;*/
+        width: 250px;
+	    top:60px;
+	    left:160px !important;
+    }
+
+    #donation-process{
+        display: none !important;
+    }
+
+    #layer2-content{
+        padding-left:5px;
+        padding-right:5px;
+        font-size: 10px;
+        /*font-weight: 200;*/
+        line-height: 2.1428571435;
+    }
+
+    #layer2-content p{
+        line-height: 1.3;
+    }
+
+    #layer2-content h2{
+        font-size:12px;
+        font-family :'Segoe Marker';
+        line-height : 0;
+    }
+
+    #layer2-content #underline{
+    line-height:1;
+    font-weight :600;
+    color:#f44336;
+}
+
+    #layer2-content ul {
+        list-style: circle inside url("../IMG/bullet.PNG");
+    }
+
+    #outerbox{
+        /*margin-left:60px;*/
+        margin-left: 0px;
+        /*margin-right:40px;*/
+        /*height : 308px;*/
+    }
+
+    #outerbox col-md-12{
+        padding-left : 0px !important;
+        padding-right : 0px !important;
+    }
+    
+    #volunteer{
+        height:100%;
+        width:100%;
+    }
+
+    #volunteer-content{
+        padding-top:2px;
+        padding-left:15px;
+        padding-right:15px;
+        padding-bottom:2px;
+        /*height:80px;*/
+    }
+
+    #volunteer .h3{
+        font-size:18px;
+    }
+
+    .vols{
+        margin-left:55px;
+    }
+
+    .vboxes{
+        margin-left:18px;
+        margin-right:18px;
+        border: 0px;
+
+    }
+    #volunteers{
+        height:100%;
+    }
+
+    div.searchimg{
+        display:none;
+    }
+
+  .ta{
+        width:-330px;
+    }
+
+    #search{
+        /*margin-left:60px;*/
+        margin-right:  -70px;
+    }
+
+    #searchbox{
+        height:100%;
+    }
+
+    .hide{
+        display:none;
+    }
+
+    #sponsors-content{
+        padding-left:10px;
+    }
+
+    #sponsors {
+        display: none;
+    }
+
+    .footer-font{
+        font-size: 10px;
+        font-weight: 100;
+    }
+
+    .footer-font .col-sm-2{
+
+    }
+
+    .footer-left{
+        float: left !important;
+        margin-left: 10px;
+    }
+
+    .footer .h4{
+        font-size:8px;
+    }
+
+    .footer-small{
+    background-color:black;
+    height:100%;
+    width:100%;
+    padding: 0px 0;
+    color:#e8e1e1;
+    /*margin-top:30px;*/
+    padding-left:20px;
+    
+    }
+
+    .contact{
+        float:right;
+        margin-right:180px;
+    }
+
+    @media only screen and (min-width:600px){
+        .jumbotron {
+            background-image: url('../IMG/Rectangle-583.png');
+        }
+    }
+
+    @media only screen and (min-width :768px)
+    {
+
+    }
+
+    /*@media only screen and (min-width:992px)
+    {
+     .col-md-4.boxes {
+                width: 300px;
+                margin-right: 90px;
+            }
+    }*/
+
+    @media only screen and (min-width:1200px)
+    {
+
+    }
+}

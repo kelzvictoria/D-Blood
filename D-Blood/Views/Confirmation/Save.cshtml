@@ -1,0 +1,59 @@
+﻿
+@{
+    ViewBag.Title = "Save";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+
+    function validateData()
+{
+
+        if ($("#OrderCode").val() == "")
+        {
+            swal("Please enter OrderCode !");
+            return false;
+        } else if ($("#OrderPrice").val() == "")
+        {
+            swal("Please enter OrderPrice !");
+            return false;
+        } else
+        {
+            return true;
+        }
+    }
+
+    function Validate(ctl, event)
+{
+        event.preventDefault();
+        swal({
+                title: "Do you want to save it?",
+                text: "Please check Information before Submiting!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Save",
+                cancelButtonText: "Cancel",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            },
+            function(isConfirm)
+             {
+                if (isConfirm)
+                {
+                    if (validateData() == true)
+                    {
+                        $("#CreateForm").submit();
+                    }
+                } else
+                {
+                    swal("Cancelled", "You have Cancelled Form Submission!", "error");
+                }
+            });
+    }
+</script>
+
+<input type="submit" id="btnCreate" onclick="Validate(this, event);" value="Create" />  
+
+<h2>Save</h2>
+

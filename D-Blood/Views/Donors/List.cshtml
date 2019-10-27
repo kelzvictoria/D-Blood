@@ -1,0 +1,57 @@
+﻿@model IEnumerable<D_Blood.Models.RegisterDonor>
+@{
+    ViewBag.Title = "Donors";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<h2>Donors</h2>
+
+<table id="dlist" class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Donor</th>
+            <th>Address</th>
+            <th>Nearest Reputed Person</th>
+            <th>Blood Group</th>
+            <th>Telephone No.</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+
+@section Scripts{
+    <script>
+        $(document).ready(function(){
+            var table = $("#dlist").DataTable(
+                {
+                    ajax: {
+                        url: "api/donors",
+                        dataSrc: ""
+                    },
+                    columns: [
+                        {
+                            data: "name"
+                        },
+                        {
+                            data: "address"
+                        },
+                        {
+                            data: "perPerson"
+                        },
+                        {
+                            data: "bloodGroup"
+                        },
+                        {
+                            data: "phone"
+                        }
+                    ]
+                });
+        });
+    </script>
+}
+
+
+
+

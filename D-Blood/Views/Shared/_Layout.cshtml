@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-BLOOD</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/sweetalert/sweet-alert.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.validate.min.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/Scripts/sweet-alert.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <img src="~/IMG/D-BLOOD.png"  class = "navbar-brand" style="margin-left:30px;"/>
+                @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li><a href="#outerwrap">About Us</a></li>
+                    @*<li>@Html.ActionLink("About Us", "About", "Home")</li>*@
+                    @*<li>@Html.ActionLink("Campaign", "Campaign", "Home")</li>*@
+                    <li><a href="#volunteers">Volunteers</a></li>
+                    @*<li>@Html.ActionLink("Volunteers", "Volunteers", "Home")</li>*@
+                    @*<li>@Html.ActionLink("Gallery", "Gallery", "Home")</li>*@
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+                @*@Html.Partial("_LoginPartial")*@
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+             @*   <hr />*@
+             <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-2 footer-left footer-font">
+                            <h4>PAGES</h4>
+                            <p><a href="#">HOME</a></p>
+                            <p><a href="#">DONATE</a></p>
+                            <p><a href="#">ABOUT</a></p>
+                            <p ><a href="#">CONTACT</a></p>
+                        </div>
+
+                        <div class="col-lg-2 col-sm-2 footer-left footer-font">
+                            <h4>SERVICE</h4>
+                            <p><a href="#">SCREENING</a></p>
+                            <p><a href="#">DONATE</a></p>
+                            <p><a href="#">SPONSOR</a></p>
+                            <p><a href="#">VOLUNTEER</a></p>
+                            <p><a href="#">PUBLICATIONS</a></p>
+                        </div>
+
+                        <div class="col-lg-2 col-sm-2 footer-left footer-font">
+                            <h4>CONTACT</h4>
+                            <p><a href="#">GET SUPPORT</a></p>
+                            <p><a href="#">CONTACT US</a></p>
+                        </div>
+
+                        <div class="col-lg-2 col-sm-2 footer-left footer-font">
+                            <h4>LEGAL</h4>
+                            <p><a href="#">PRIVACY POLICY</a></p>
+                            <p><a href="#">TERMS & CONDITIONS</a></p>
+                            <p><a href="#">BLOG</a></p>
+                        </div>
+
+                        <div class="col-lg-2 col-sm-2 footer-left footer-font">
+                            <h4>SOCIALS</h4>
+                            <ul class="socials list-unstyled">
+                                <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+            <footer class="footer-small">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-3 logo footer-left">
+                            <img src="~/IMG/D-BLOOD.png" />
+                        </div>
+
+                        <div class="col-lg-3 col-sm-3 footer-left">
+                            <h4>ADDRESS</h4>
+                            <p>5Th Floor, AH Building, 75B Ajah, Lekki</p>
+                            <p>Lagos, Nigeria</p>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-3 footer-left">
+                            <h4>HELP</h4>
+                            <p>Need Blood donation urgently?</p>
+                            <p>Just reach out to us.</p>
+                        </div>
+
+                        <div class="col-lg-3 col-sm-3 contact">
+                            <input type="submit" value="Contact Us" class="btn btn-primary" style="background-color:#e01414;" />
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            </div>
+
+            @Scripts.Render("~/bundles/jquery")
+                @Scripts.Render("~/bundles/bootstrap")
+                
+           
+            @RenderSection("scripts", required: false)
+        </body>
+        </html>

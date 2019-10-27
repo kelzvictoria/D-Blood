@@ -1,0 +1,244 @@
+﻿@model D_Blood.ViewModels.RegisterDonorViewModel
+
+@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script type="text/javascript">
+      @if (TempData["Message"] != null)
+      {
+        <text>
+        $(window).load(function () {
+            $(document).ready(function () {
+                swal({ title: "Message", text: "@TempData["Message"]", type: "success" });
+            });
+        });
+        </text>
+      }
+</script>
+<div class="panel-body">
+    <div class="jumbotron container-fluid">
+        <h1> Donate Blood to Save a Life</h1><br />
+
+        <p>
+            Blood is the most precious gift anyone can give to another person.<br />
+            Donating Blood not only saves the life of the donee but also the donor's lives.
+        </p>
+        <br />
+        <a class="btn btn-primary" style="background-color:#e01414;" href="/RegisterDonor/RegisterDonor">Donate Now</a>
+        @*<input type="button" value="Donate Now" class="btn btn-primary" style="background-color:#e01414;" />*@
+    </div>
+
+    <div class="row don">
+        <div class="col-md-12" id="outerbox">
+            <div class="col-md-4 boxes" style="width:300px; margin-right: 90px;">
+                <div class="box-img">
+                    <img src="~/IMG/image 32.png" />
+                </div>
+                <div class="box-content">
+                    <h3>
+                        Become a Donor
+                    </h3>
+                    <p>
+                        To save a life, you donate by giving just one unit of blood.You can then save three lives or even several lives...
+                    </p>
+                </div>
+                @*<p><a href="" style="color:#F44336;">Read more</a></p>*@
+            </div>
+            <div class="col-md-4 boxes" style="width:300px; margin-right: 90px;">
+                <div class="img">
+                    <img src="~/IMG/image 30.png" />
+                </div>
+                <div class="box-content">
+                    <h3>
+                        Why Give Blood?
+                    </h3>
+                    <p>
+                        Blood is the precious gift that anyone can give to another person. Donating blood will not only save the life of the donees but also donors.
+                    </p>
+                </div>
+                @*<p><a href="" style="color:#F44336;">Read more</a></p>*@
+            </div>
+            <div class="col-md-4 boxes" style="width:300px;">
+                <div class="img">
+                    <img src="~/IMG/image 31.png" />
+                </div>
+                <div class="box-content">
+                    <h3>
+                        How your Donation Helps
+                    </h3>
+                    <p>
+                        In many countries, demand exceeds supply abd blood services face the challenge of making blood available for patients.
+                    </p>
+                </div>
+                @*<p><a href="" style="color:#F44336;">Read more</a></p>*@
+            </div>
+
+        </div>
+    </div>
+
+    <div class="row" id="outerwrap">
+        <div id="layer1">
+
+        </div>
+        <div id="layer2">
+            <div id="layer2-content">
+                <h2>Who We Are ?</h2>
+
+                <p id="underline">_______</p>
+
+                <p>
+                    Blood Buddies is for public donation center with blood donation members in the changing healthcare system.
+                </p>
+
+                <ul>
+                    <li>Specialist blood donors and clinical supervision</li>
+                    <n />
+                    <li>Increasing communication with our members</li>
+                    <li>Examine critically to ensure alignment</li>
+                    <li>The extra care of a multi-disciplinary team</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="volunteer">
+            <div id="volunteer-content">
+                <h3> Donate Blood & Help Save Someone's Future</h3>
+                <p>You can give blood at any of our blood donation venues all over the world. We have a total of sixty thousands donor centres and visit thousands of other venues on various occasions.</p>
+                <a class="btn btn-primary" style="background-color:#e01414;" href="/RegisterDonor/RegisterDonor">Become a Volunteer</a>
+            </div>
+        </div>
+
+    <div class="row" id="donation-process">
+        <div id="process-header">
+            <h3>Donation Process</h3>
+            <p id="underline"> <img src="~/IMG/Vector (1).png" /> - - </p>
+        </div>
+        <div id="process-content">
+            <img src="~/IMG/steps.PNG" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="volunteers">
+            <div id="volunteers-header">
+                <h3>Our Volunteers</h3>
+                <p id="underline"> <img src="~/IMG/Vector (1).png" /> - - </p>
+            </div>
+            <div id="volunteers-content" class="col-md-12">
+                <div class="col-md-2 vboxes">
+                    <div class="img">
+                        <img src="~/IMG/05.png" />
+                    </div>
+                    <div class="box-content vols">
+                        <h3>
+                            Anuolapo Omotayo
+                        </h3>
+                        <p>
+                            Founder
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-2 vboxes">
+                    <div class="img">
+                        <img src="~/IMG/02.png" />
+                    </div>
+                    <div class="box-content vols">
+                        <h3>
+                            Precious Chukwu
+                        </h3>
+                        <p>
+                            Manager
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2 vboxes" style="background-color:#219cc5;">
+                    <div class="img">
+                        <img src="~/IMG/03.png" />
+                    </div>
+                    <div class="box-content vols">
+                        <h3>
+                            Saviour Peter
+                        </h3>
+                        <p>
+                            Counsellor
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2 vboxes">
+                    <div class="img">
+                        <img src="~/IMG/01.png" />
+                    </div>
+                    <div class="box-content vols">
+                        <h3>
+                            Victoria Kazeem
+                        </h3>
+                        <p>
+                            Co Founder
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-2 vboxes">
+            <div class="img">
+                <img src="~/IMG/04.png" />
+            </div>
+            <div class="box-content vols">
+                <h3>
+                    Gloria Ukah
+                </h3>
+                <p>
+                   Co Founder
+                </p>
+            </div>
+        </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row" id="search">
+            <div class="col-md-12" id="searchbox">
+                <div class="col-md-6 searchimg" >
+                    <img src="~/IMG/Rectangle 2.3.png" style="float:right; margin-right:20px;"/>
+                </div>
+
+                <div class="col-md-6 searchform">
+                    <h3>Find a Blood Donor</h3>
+
+                    <p id="underline">_______</p>
+                    <div class="col-md-6 form-group">
+                        @Html.TextBoxFor(m => m.Name, new { @class = "form-control", @placeholder = "Full Name" })
+                    </div>
+                    <div class="col-md-6 form-group">
+                        @Html.TextBoxFor(m => m.BloodGroup, new { @class = "form-control", @placeholder = "Blood Group" })
+                    </div>
+                    <div class="col-md-6 form-group">
+                        @Html.TextBoxFor(m => m.State, new { @class = "form-control", @placeholder = "State" })
+                    </div>
+                    <div class="col-md-6 form-group">
+                        @Html.TextBoxFor(m => m.LGA, new { @class = "form-control", @placeholder = "LGA" })
+                    </div>
+                    <div class="col-md-8 form-group">
+                        <textarea placeholder ="Comment" class="form-control"></textarea> 
+                    </div>
+                    
+                </div>
+                <a class="btn btn-primary" style="background-color:#e01414;margin-left:99px;" href="/RegisterDonors/Index">Search</a>
+            </div>
+    </div>
+
+    <div class="row" id="sponsors">
+        <div id="sponsors-header">
+            <h3>Our Sponsors</h3>
+            <p id="underline"> <img src="~/IMG/Vector (1).png" /> - - </p>
+        </div>
+        <div id="sponsors-content" style="text-align:center">
+            <img src="~/IMG/sponsors-resized.PNG" />
+        </div>
+
+    </div>
+
+
+
+</div>

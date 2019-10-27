@@ -1,0 +1,141 @@
+﻿@model D_Blood.ViewModels.RegisterDonorViewModel
+@{
+    ViewBag.Title = "RegisterDonor";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script src="~/Scripts/sweet-alert.js"></script>
+<link href="~/Content/sweetalert/sweet-alert.css" rel="stylesheet" />
+
+
+<script type="text/javascript">
+      @if (TempData["Message"] != null)
+      {
+        <text>
+        $(window).load(function () {
+            $(document).ready(function () {
+                swal({ title: "Message", text: "@TempData["Message"]", type: "success" });
+            });
+        });
+        </text>
+      }
+</script>
+<script type="text/javascript">
+    function validateData()
+    {
+        debugger;
+
+        if($("#Dob").val() =="1 01 0001")
+        {
+            swal("Please enter Date of Birth!");
+            return false;
+        }else if ($("#LastDonated").val() =="1 01 0001")
+        {
+            swal("Please enter Last Donated Date!");
+            return false;
+        }
+        else{
+            return true;
+        }
+    }
+    function Validate(ctl, event) {
+        event.preventDefault();
+        swal({
+            title: "Do you want to save it?",
+            text: "Please check Information before Submiting!",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#DD6B55",
+            confirmButtonText: "Save",
+            cancelButtonText: "Cancel",
+            closeOnConfirm: false,
+            closeOnCancel: false
+        },
+            function (isConfirm) {
+                if (isConfirm) {
+                    if (validateData() == true) {
+                        $("#register").submit();
+                    }
+                } else {
+                    swal("Cancelled", "You have Cancelled Form Submission!", "error");
+                }
+            });
+    }
+</script>
+
+
+    @using (Html.BeginForm("Save", "RegisterDonor", FormMethod.Post, new { id = "register"})){
+        @Html.ValidationSummary(true, "Please fix the following errors.")
+        <div class="container panel-body register-form">
+            <h2 style="margin-left:15px;">Register</h2>
+            <div class="form-group col-md-4">
+                @Html.LabelFor(m => m.Name)
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Name)
+            </div>
+
+            <div class="form-group col-md-6">
+                @Html.LabelFor(m => m.Address)
+                @Html.TextBoxFor(m => m.Address, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Address)
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(m => m.Dob)
+                @Html.TextBoxFor(m => m.Dob, "{0:d MM yyyy}", new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Dob)
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(m => m.Sex)
+                @Html.TextBoxFor(m => m.Sex, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Sex)
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(m => m.State)
+                @Html.TextBoxFor(m => m.State, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.State)
+            </div>
+
+            <div class="form-group col-md-3">
+                @Html.LabelFor(m => m.LGA)
+                @Html.TextBoxFor(m => m.LGA, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.LGA)
+            </div>
+
+            <div class="form-group col-md-3">
+                @Html.LabelFor(m => m.Phone)
+                @Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(m => m.BloodGroup)
+                @Html.TextBoxFor(m => m.BloodGroup, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group col-md-4">
+                @Html.LabelFor(m => m.RepPerson)
+                @Html.TextBoxFor(m => m.RepPerson, new { @class = "form-control" })
+            </div>
+
+            <div class="form-group col-md-2">
+                @Html.LabelFor(m => m.LastDonated)
+                @Html.TextBoxFor(m => m.LastDonated, "{0:d MM yyyy}", new { @class = "form-control" })
+            </div>
+
+            <div class="form-group col-md-6">
+                @Html.LabelFor(m => m.Occupation)
+                @Html.TextBoxFor(m => m.Occupation, new { @class = "form-control" })
+            </div><br />
+            @Html.AntiForgeryToken()
+            <input type="submit" id="btnRegister" value="Submit" onclick="Validate(this, event);" class="btn btn-primary" style="background-color:#e01414; margin-left:18px;" />
+        </div>
+    }
+
+@section Scripts
+{
+         
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
